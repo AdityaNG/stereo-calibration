@@ -9,6 +9,13 @@
 using namespace std;
 using namespace cv;
 
+// /home/aditya/KITTI/2011_09_26_drive_0119_extract
+// ./calibrate -w 6 -h 8 -n 16 -s 0.02423 -d /home/aditya/KITTI/2011_09_26_drive_0119_extract/image_02/data -i "00000000" -e "png"  -o "cam_left.yml"
+// ./calibrate -w 6 -h 8 -n 17 -s 0.02423 -d "../calib_imgs/3/" -i "left" -o "cam_left.yml" -e "png"
+// ./calibrate -w 8 -h 6 -n 17 -s 0.02423 -d "../calib_imgs/3/" -i "left" -o "cam_left.yml" -e "png"
+
+// ./calibrate_stereo -n 16 -u [left_cam_calib] -v [right_cam_calib] -L [left_img_dir] -R [right_img_dir] -l [left_img_prefix] -r [right_img_prefix] -o [output_calib_file] -e [file_extension]
+
 vector< vector< Point3f > > object_points;
 vector< vector< Point2f > > imagePoints1, imagePoints2;
 vector< Point2f > corners1, corners2;
